@@ -20,11 +20,17 @@ Schema electronique
 ~~~
 
 record GPIO 4
+
 prev   GPIO 17
+
 next   GPIO 18
+
 delete GPIO 27
+
 play   GPIO 22
+
 stop   GPIO 23
+
 save   GPIO 24
 
 switch cercle   GPIO 13
@@ -60,8 +66,9 @@ Faire ces commandes bash.
       sudo apt-get install x11-xserver-utils -> enlever la mise en veille
 ~~~
 
+Pour autodémarrez le programme -> 
 sudo nano /etc/xdg/lxsession/LXDE/autostart
-ajouter ces lignes
+Ajoutez ces lignes
 ~~~
 	@xset s off
 	@xset -dpms
@@ -69,9 +76,21 @@ ajouter ces lignes
 	@lxterminal
 ~~~
 
+Modifiez le .bashrc dans le /home/pi 
+et ajoutez
+
+~~~
+sleep 5
+#chemin du dossier pas-à-pas
+cd ./Pas_a_pas
+unclutter -idle 0.1 & sudo python main.py
+~~~
+
+Modifiez l'autostart
+
 sudo nano ~/.config/lxsession/LXDE/autostart
 
-ajouter la ligne
+Ajoutez la ligne
 ~~~
-@lxterminal
+	@lxterminal
 ~~~
