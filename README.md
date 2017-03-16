@@ -18,7 +18,8 @@ Software developpement - Rodolphe Dugueperoux, Adrien Schmouker.
 ~~~
 Electronic diagram
 ~~~
-![Electronic diagram](https://github.com/duguep/Pas-a-pas/Electronic.png)
+![Electronic diagram](https://github.com/duguep/Pas-a-pas/blob/master/Electronic.png)
+~
 Button Record: 		GPIO 4
 
 Button Previous:   	GPIO 17
