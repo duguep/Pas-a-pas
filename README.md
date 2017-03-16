@@ -16,35 +16,35 @@ Software developpement - Rodolphe Dugueperoux, Adrien Schmouker.
 
 
 ~~~
-Schema electronique
+Electronic diagram
 ~~~
 
-record GPIO 4
+Button Record: 		GPIO 4
 
-prev   GPIO 17
+Button Previous:   	GPIO 17
 
-next   GPIO 18
+Button Next:		GPIO 18
 
-delete GPIO 27
+Button Delete:		GPIO 27
 
-play   GPIO 22
+Button Play:		GPIO 22
 
-stop   GPIO 23
+Button Stop:		GPIO 23
 
-save   GPIO 24
+Button Save:   		GPIO 24
 
-switch cercle   GPIO 13
-switch triangle GPIO 6
-switch playback GPIO 19
+Switch cercle:   	GPIO 13
+switch triangle: 	GPIO 6
+switch playback: 	GPIO 19
 
-Switch 3 entrées
+Switch 3 entries:
 
-mode assisté    GPIO 26
+assistant mode:    	GPIO 26
 
-mode free       GPIO 20
+free mode:	       	GPIO 20
 
 ~~~
-Installation
+Install
 ~~~
 
 ~
@@ -52,23 +52,21 @@ Installation electronique voir Schema.
 ~
 
 ~
-Installation Pas-à-Pas (code)
+Installation Pas-a-Pas (code)
 ~
 
-
-Installez Debian graphique sur la rapsi
-
-Faire ces commandes bash.
+Install a graphic debian in the rapsberry pi.
+When the raspberry pi is ready, open terminal and make this command.
 ~~~
-      sudo apt-get install libopencv-dev python-opencv -> installation d'opencv
+      sudo apt-get install libopencv-dev python-opencv -> installation of opencv
       sudo apt-get install libgl1-mesa-dri
-      sudo apt-get install unclutter -> enlever l'affichage de la souris
-      sudo apt-get install x11-xserver-utils -> enlever la mise en veille
+      sudo apt-get install unclutter -> To take of the mouse icon
+      sudo apt-get install x11-xserver-utils -> To take of standby
 ~~~
 
-Pour autodémarrez le programme -> 
+For autostart Pas-a-Pas program.
 sudo nano /etc/xdg/lxsession/LXDE/autostart
-Ajoutez ces lignes
+Add this lines.
 ~~~
 	@xset s off
 	@xset -dpms
@@ -76,17 +74,16 @@ Ajoutez ces lignes
 	@lxterminal
 ~~~
 
-Modifiez le .bashrc dans le /home/pi 
-et ajoutez
-
+Edit .bashrc on /home/pi 
+and add
 ~~~
 sleep 5
-#chemin du dossier pas-à-pas
+#chemin du dossier pas-a-pas
 cd ./Pas_a_pas
 unclutter -idle 0.1 & sudo python main.py
 ~~~
 
-Modifiez l'autostart
+Edit autostart.
 
 sudo nano ~/.config/lxsession/LXDE/autostart
 
@@ -95,5 +92,5 @@ Ajoutez la ligne
 	@lxterminal
 ~~~
 
-
-ROdolphe
+Check if the GPIO is Opened.
+http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LII-D-3
