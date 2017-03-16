@@ -18,7 +18,7 @@ Software developpement - Rodolphe Dugueperoux, Adrien Schmouker.
 ~~~
 Electronic diagram
 ~~~
-
+![Electronic diagram](https://github.com/duguep/Pas-a-pas/Electronic.png)
 Button Record: 		GPIO 4
 
 Button Previous:   	GPIO 17
@@ -39,20 +39,16 @@ switch playback: 	GPIO 19
 
 Switch 3 entries:
 
-assistant mode:    	GPIO 26
+Assistant mode:    	GPIO 26
 
-free mode:	       	GPIO 20
+Free mode:	       	GPIO 20
 
 ~~~
 Install
 ~~~
 
 ~
-Installation electronique voir Schema.
-~
-
-~
-Installation Pas-a-Pas (code)
+Pas-a-Pas Installation (code)
 ~
 
 Install a graphic debian in the rapsberry pi.
